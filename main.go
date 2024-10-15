@@ -62,6 +62,7 @@ func (cache *Cache) Delete(key string) {
 }
 
 // Cleanup removes expired items from the cache
+// Return void
 func (cache *Cache) DeleteExpiredCache() {
 	cache.mu.Lock()
 	defer cache.mu.Unlock()
