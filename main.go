@@ -1,4 +1,4 @@
-package main
+package cache
 
 import (
 	"sync"
@@ -13,7 +13,7 @@ type Cache struct {
 }
 
 // Define new cache
-func NewMemCache() *Cache {
+func NewCacheMem() *Cache {
 	return &Cache{
 		items: make(map[string]CacheData[any]),
 	}

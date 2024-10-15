@@ -1,4 +1,4 @@
-package main
+package cache
 
 import (
 	"sync"
@@ -43,7 +43,7 @@ func TestCache_Set(t *testing.T) {
 }
 
 func TestMain(t *testing.T) {
-	cache := NewMemCache()
+	cache := NewCacheMem()
 
 	// Set cache values
 	cache.Set("foo", "bar", 3*time.Second)
@@ -68,7 +68,7 @@ func TestMain(t *testing.T) {
 }
 
 func TestMainExpired(t *testing.T) {
-	cache := NewMemCache()
+	cache := NewCacheMem()
 
 	// Set cache values
 	cache.Set("foo", "bar", 3*time.Second)
