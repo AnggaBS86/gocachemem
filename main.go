@@ -6,7 +6,7 @@ import (
 )
 
 // Define Cache struct
-// for define map items and Mutex mu
+// for define map items and Mutex `mu`
 type Cache struct {
 	items map[string]CacheData[any]
 	mu    sync.RWMutex
