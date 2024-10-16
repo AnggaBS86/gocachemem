@@ -43,7 +43,7 @@ func TestCache_Set(t *testing.T) {
 }
 
 func TestMain(t *testing.T) {
-	cache := NewCacheMem()
+	cache := GoCacheMem()
 
 	// Set cache values
 	cache.Set("foo", "bar", 3*time.Second)
@@ -68,7 +68,7 @@ func TestMain(t *testing.T) {
 }
 
 func TestMainExpired(t *testing.T) {
-	cache := NewCacheMem()
+	cache := GoCacheMem()
 
 	// Set cache values
 	cache.Set("foo", "bar", 3*time.Second)

@@ -13,7 +13,7 @@ type Cache struct {
 }
 
 // Define new cache
-func NewCacheMem() *Cache {
+func GoCacheMem() *Cache {
 	return &Cache{
 		items: make(map[string]CacheData[any]),
 	}
