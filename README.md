@@ -26,7 +26,7 @@ func main() {
 
 	// check the cache lifetime --> cache name `foo` should be still exists
 	val, exists := cache.Get("foo")
-	fmt.Println(val, exists)
+	fmt.Println(val, exists) // should return `bar true`
 
 	//sleep again for 3 seconds --> total 6 seconds from the start
 	fmt.Println("Sleep for 3 seconds (again)")
