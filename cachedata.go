@@ -10,7 +10,7 @@ type CacheData[T any] struct {
 
 // Check the CacheData is Expired
 // Return bool
-func (item CacheData[T]) IsExpired() bool {
+func (item *CacheData[T]) IsExpired() bool {
 	if item.Expiration < 1 {
 		return false
 	}
